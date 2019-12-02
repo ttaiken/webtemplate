@@ -1,3 +1,5 @@
+https://ng-bootstrap.github.io/#/components/alert/examples
+
 --------------------------------
 echo "# webtemplate" >> README.md
 git init
@@ -6,6 +8,17 @@ git commit -m "first commit"
 git remote add origin https://github.com/ttaiken/webtemplate.git
 git push -u origin master
 
+git remote add origin https://github.com/ttaiken/webtemplate.git
+git push -u origin master
+
+git remote -v
+
+----update----
+git pull origin master
+git push -u origin master
+
+git branch [name]
+git push -u orgin [name]
 
 --------------------------------------------------------
 npm install --save @ng-bootstrap/ng-bootstrap
