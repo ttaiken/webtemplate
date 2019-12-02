@@ -1,0 +1,68 @@
+--------------------------------
+echo "# webtemplate" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/ttaiken/webtemplate.git
+git push -u origin master
+
+
+--------------------------------------------------------
+npm install --save @ng-bootstrap/ng-bootstrap
+npm install bootstrap
+
+
+
+0.app.module.ts
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+imports: [
+NgbModule
+]
+1.styles.scss
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+#or------
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+#or------
+angular.json
+"styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css"
+]
+2.html
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item">Action - 1</button>
+        <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button>
+      </div>
+    </div>
+  </div>
+<div class="col text-right">
+    <div ngbDropdown placement="top-right" class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Toggle dropup</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+        <button class="dropdown-item">Action - 1</button>
+        <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+------CSRF---------------------
+app.module.ts
+https://angular.io/guide/http#security-xsrf-protection
+
+import { HttpClientModule,HttpClientXsrfModule } from '@angular/common/http';
+
+imports: [
+  HttpClientModule,
+  HttpClientXsrfModule.withOptions({
+    cookieName: 'My-Xsrf-Cookie',
+    headerName: 'My-Xsrf-Header',
+  }),
+],
