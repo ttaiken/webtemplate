@@ -1,6 +1,7 @@
 https://ng-bootstrap.github.io/#/components/alert/examples
 
 --------------------------------
+ng new testangularpj --style=scss
 echo "# webtemplate" >> README.md
 git init
 git add .
@@ -18,7 +19,7 @@ git pull origin master
 git push -u origin master
 
 git branch [name]
-git push -u orgin [name]
+git push -u origin [name]
 
 --------------------------------------------------------
 npm install --save @ng-bootstrap/ng-bootstrap
@@ -40,32 +41,36 @@ NgbModule
 #or------
 angular.json
 "styles": [
-  "node_modules/bootstrap/dist/css/bootstrap.min.css"
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "node_modules/bootstrap/dist/css/bootstrap-reboot.css",
+              "node_modules/bootstrap/dist/css/bootstrap-grid.css",
 ]
+1.styles.scss
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    nav {
+      width: 80%;
+    }
+  }
 2.html
-<div class="row">
-  <div class="col">
-    <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button class="dropdown-item">Action - 1</button>
-        <button class="dropdown-item">Another Action</button>
-        <button class="dropdown-item">Something else is here</button>
-      </div>
+<header></header>
+
+<div class="container content"> <!-- container centers content on large screens -->
+  <div class="row">             <!-- responsive row has 12 columns by default -->
+    <div class="col-md-6">      <!-- uses 6 columns on medium and larger screens... -->
     </div>
-  </div>
-<div class="col text-right">
-    <div ngbDropdown placement="top-right" class="d-inline-block">
-      <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Toggle dropup</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
-        <button class="dropdown-item">Action - 1</button>
-        <button class="dropdown-item">Another Action</button>
-        <button class="dropdown-item">Something else is here</button>
-      </div>
+    <div class="col-md-6">      <!-- uses 12 columns on smaller than medium screens -->
     </div>
   </div>
 </div>
 
+<footer></footer>
 ------CSRF---------------------
 app.module.ts
 https://angular.io/guide/http#security-xsrf-protection
@@ -79,3 +84,91 @@ imports: [
     headerName: 'My-Xsrf-Header',
   }),
 ],
+--------------css example-----
+:root {
+  --color: #008000;
+  --color-d: darken($color, 5%);
+  --color-l: lighten($color, 7.5%);
+}
+nav {
+  position: relative;
+  visibility: visible;
+  width: 200px;
+  background: var(--color);
+}
+-----------------------------
+
+<div class="container content">
+  <!-- container centers content on large screens -->
+  <div class="row">
+    <!-- responsive row has 12 columns by default -->
+    <div class="col-md-6">
+      <!-- uses 6 columns on medium and larger screens... -->
+    </div>
+    <div class="col-md-6">
+      <!-- uses 12 columns on smaller than medium screens -->
+    </div>
+  </div>
+</div>
+--------------------------------------
+body {
+  height: 100vh;
+  display: flex;
+}
+
+aside {
+  flex: none;
+  position: absolute;
+  width: 200px;
+  overflow-y: auto;
+  display: block;
+  visibility: hidden;
+}
+
+.content {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+  .content main {
+    flex: auto;
+  }
+  .content header {
+    height: 75px;
+  }
+  .content footer {
+    height: 50px;
+  }
+----------------------
+body {
+  height: 100vh;
+  display: flex;
+}
+
+aside {
+  flex: none;
+  position: absolute;
+  width: 200px;
+  overflow-y: auto;
+  display: block;
+  visibility: hidden;
+}
+
+.content {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+  .content main {
+    flex: auto;
+  }
+  .content header {
+    height: 75px;
+  }
+  .content footer {
+    height: 50px;
+  }

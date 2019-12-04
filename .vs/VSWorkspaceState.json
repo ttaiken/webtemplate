@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src\\app"
+    "\\node_modules\\bootstrap",
+    "\\node_modules\\bootstrap\\dist",
+    "\\node_modules\\bootstrap\\dist\\css"
   ],
+  "SelectedNode": "\\notes.txt",
   "PreviewInSolutionExplorer": false
 }
