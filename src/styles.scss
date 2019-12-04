@@ -12,11 +12,11 @@
     aside {
       background-color: $left-bg;
       flex: none;
-      position: absolute;
+      position:  absolute;
       width: 200px;
       overflow-y: auto;
-      display: block;
-      visibility: hidden;
+      display: flex;
+    
     }
 
     .content {
@@ -33,7 +33,7 @@
 
     .content header {
       background-color: $button-bg;
-      height: 75px;
+
     }
 
     .content footer {

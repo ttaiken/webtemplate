@@ -1,14 +1,16 @@
 <body>
-  <aside>
-    ASIDE
-    <p>item</p>
-    <p>item</p>
+  <aside *ngIf="isOn">
+    <app-aside clss="aside">
 
-    <p>item</p>
+    </app-aside>
   </aside>
   <div class="content">
-    <header>HEADER</header>
-    <main>CONTENT</main>
+    <header>
+      <app-nav-bar (showEvent)="receiveEvent($event)"></app-nav-bar>
+    </header>
+    <main>
+      main
+    </main>
     <footer>FOOTER</footer>
   </div>
 </body>

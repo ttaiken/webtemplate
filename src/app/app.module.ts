@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DropdownComponent } from './UI/Menu/dropdown/dropdown.component';
+import { NavBarComponent } from './UI/Layout/nav-bar/nav-bar.component';
+import { AsideComponent } from './UI/Layout/aside/aside.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DropdownComponent
+    DropdownComponent,
+    NavBarComponent,
+    AsideComponent
   ],
   imports: [
     BrowserModule,
