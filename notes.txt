@@ -2,6 +2,19 @@ https://ng-bootstrap.github.io/#/components/alert/examples
 
 --------------------------------
 ng new testangularpj --style=scss
+ng generate component cp01
+ng g service common/services/Constants
+
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class ConstantsService{
+    readonly baseAppUrl: string = 'http://localhost:3000/';
+    readonly distLocation: string = 'MyApplication/';
+}
+------------------------------------------------
+*ngIf='!changeText', (mouseout)='changeText()',(mousemove)='onMouseMove($event)'
+------------------------------------------------
 echo "# webtemplate" >> README.md
 git init
 git add .
@@ -172,3 +185,5 @@ aside {
   .content footer {
     height: 50px;
   }
+----------------------------
+

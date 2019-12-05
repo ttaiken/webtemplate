@@ -1,12 +1,12 @@
 <body>
-  <aside *ngIf="isOn">
+  <aside *ngIf="showAside()" >
     <app-aside clss="aside">
 
     </app-aside>
   </aside>
   <div class="content">
     <header>
-      <app-nav-bar (showEvent)="receiveEvent($event)"></app-nav-bar>
+      <app-nav-bar ></app-nav-bar>
     </header>
     <main>
       main
