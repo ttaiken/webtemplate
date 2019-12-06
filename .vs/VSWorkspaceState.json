@@ -7,8 +7,8 @@
     "\\src\\app\\UI\\Layout",
     "\\src\\app\\UI\\Layout\\aside",
     "\\src\\app\\UI\\Layout\\nav-bar",
-    "\\src\\app\\UI\\Menu\\dropdown"
+    "\\src\\app\\UI\\Menu"
   ],
-  "SelectedNode": "\\src\\app\\app.component.ts",
+  "SelectedNode": "\\src\\app\\UI\\Layout\\nav-bar\\nav-bar.component.ts",
   "PreviewInSolutionExplorer": false
 }

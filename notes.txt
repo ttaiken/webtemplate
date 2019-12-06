@@ -27,14 +27,14 @@ git push -u origin master
 
 git remote -v
 
-----update----
+----------------update----------------
 git pull origin master
 git push -u origin master
 
 git branch [name]
 git push -u origin [name]
 
---------------------------------------------------------
+-------------------------------------
 npm install --save @ng-bootstrap/ng-bootstrap
 npm install bootstrap
 

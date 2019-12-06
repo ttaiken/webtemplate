@@ -1,9 +1,7 @@
-<body>
-  <aside *ngIf="showAside()" >
-    <app-aside clss="aside">
-
-    </app-aside>
-  </aside>
+<body  (contextmenu)="onRightClick()">
+  <app-aside class="leftside" *ngIf="showAside()">
+  </app-aside>
+  
   <div class="content">
     <header>
       <app-nav-bar ></app-nav-bar>
@@ -15,14 +13,3 @@
   </div>
 </body>
 
-  <!--<div class="container">
-    <div class="left">
-      Left
-    </div>
-    <div class="right">
-      Right
-      <button class="button">Button</button>
-    </div>
-  </div>-->
-
-<!--  <router-outlet></router-outlet>-->

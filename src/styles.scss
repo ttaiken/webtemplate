@@ -7,16 +7,19 @@
       display: flex;
     }
 
-
-
-    aside {
+    .leftside {
       background-color: $left-bg;
+      height: 100vh;
       flex: none;
-      position:  absolute;
+      position: absolute;
       width: 200px;
       overflow-y: auto;
       display: flex;
-    
+
+      /*@media screen and (orientation: landscape) {
+           position: relative;    
+      }*/
+  
     }
 
     .content {
@@ -33,14 +36,26 @@
 
     .content header {
       background-color: $button-bg;
-
     }
 
     .content footer {
       background-color: $button-bg;
       height: 50px;
     }
-    /*.container {
+    @media screen and (orientation: landscape) {
+      .leftside {
+        position: relative;
+
+      }
+    }
+  }
+}
+  @include themable(theme-1, #f7eb80, #497265, #82aa91, #fff, #bc6a49);
+  @include themable(theme-2, #e4ada7, #d88880, #cc6359, #fff, #481b16);
+
+
+
+  /*.container {
         background-color: $container-bg;
         border: 1px solid #000;
         display: flex;
@@ -81,9 +96,3 @@
           right: 10px;
         }
       }*/
-  }
-}
-
-  @include themable(theme-1, #f7eb80, #497265, #82aa91, #fff, #bc6a49);
-  @include themable(theme-2, #e4ada7, #d88880, #cc6359, #fff, #481b16);
-

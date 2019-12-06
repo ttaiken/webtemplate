@@ -19,4 +19,8 @@ export class AppComponent {
     changeAside() {
         this.gvariableService.showAside = !this.gvariableService.showAside; 
     }
+    onRightClick() {
+        this.gvariableService.showAside = !this.gvariableService.showAside;
+        return false;
+    }
 }

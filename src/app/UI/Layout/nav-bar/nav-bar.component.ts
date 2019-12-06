@@ -10,9 +10,12 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {
   }
-    showAside() {
-        this.gvariableService.showAside = !this.gvariableService.showAside;
+  showAside() {
+      this.gvariableService.showAside = !this.gvariableService.showAside;
       
+  }
+    showButton() {
+        return !this.gvariableService.showAside
     }
     
 }
